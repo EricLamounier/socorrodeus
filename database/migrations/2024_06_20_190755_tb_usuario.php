@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('livro', function(Blueprint $table){
+        Schema::create('usuario', function(Blueprint $table){
             $table->id();
-            $table->string('nome')->unique()->nullable(false);
-            $table->integer('quantidade')->nullable(false);
-            $table->dateTime('data_cadastro')->nullable(true);
-            $table->string('autor')->nullable(false);
+            $table->string('token');
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('usuario');
     }
 };
