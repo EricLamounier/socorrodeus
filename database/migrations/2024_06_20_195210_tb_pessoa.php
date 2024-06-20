@@ -13,7 +13,6 @@ return new class extends Migration
             $table->id()->nullable(false);
             $table->string('nome')->nullable(false);
             $table->string('imagem');
-            $table->date('data');
             $table->date('data_criacao')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
