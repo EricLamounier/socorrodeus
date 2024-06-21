@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('situacao')->default(0)->nullable(false);
             $table->date('data')->default(DB::raw('CURRENT_TIMESTAMP'))->nullable(false);
             $table->date('data_criacao')->default(DB::raw('CURRENT_TIMESTAMP'))->nullable(false);
-            $table->integer('pessoa_id_fk')->default(-1)->nullable(false);
         });
     }
 
