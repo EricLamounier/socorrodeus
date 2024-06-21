@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class livro extends Model
+class Conta extends Model
 {
     use HasFactory;
-
-    protected $table = 'livro';
-    protected $primarykey = 'id';
+    protected $table = 'conta';
+    protected $primaryKey = 'id';
     public $timestamps = false;
 
     protected $fillable = [
-        'nome', 'quantidade', 'data_cadastro', 'autor'
+        'id', 'nome', 'valor', 'data', 'situacao', 'tipo', 'data_criacao', 'pessoa_id_fk',
     ];
 }

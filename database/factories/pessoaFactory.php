@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\pessoa>
  */
-class pessoaFactory extends Factory
+class PessoaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,8 @@ class pessoaFactory extends Factory
     public function definition(): array
     {
         $faker = \Faker\Factory::create('pt_BR');
-
         return [
-            'nome'=> $faker->text(31),
-            'matricula' => $faker->numerify('####'),
+            'nome'=>  $faker->name(),
         ];
     }
 }

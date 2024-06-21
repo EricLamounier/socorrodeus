@@ -12,7 +12,7 @@ return new class extends Migration
         Schema::create('pessoa', function (Blueprint $table){
             $table->id()->nullable(false);
             $table->string('nome')->nullable(false);
-            $table->string('imagem');
+            $table->string('imagem')->nullable(true);
             $table->date('data_criacao')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
